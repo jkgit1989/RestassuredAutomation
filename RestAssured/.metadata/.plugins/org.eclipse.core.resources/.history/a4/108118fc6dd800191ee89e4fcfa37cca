@@ -1,0 +1,12 @@
+
+public class StringOperations {
+
+	String data = "jitendra.kumar2@gmail.com";
+
+	String [] splitarray = data.toCharArray();
+	
+	public static void main(String [] args)
+{
+	
+}
+}

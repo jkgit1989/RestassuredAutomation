@@ -1,0 +1,15 @@
+package login.io.login;
+
+import io.restassured.response.Response;
+import io.restassured.RestAssured;
+
+public class google {
+
+	private static final int HTTP_STATUS_CODE = 200;
+
+	public void testgoogle() {
+		Response resp = RestAssured.get("http://www.google.com");
+		System.err.println(resp.getStatusCode());
+	}
+
+}

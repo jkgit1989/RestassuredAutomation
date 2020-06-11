@@ -1,0 +1,21 @@
+package login.io.login;
+import io.restassured.RestAssured;
+import org.apache.http.HttpResponse;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        HttpResponse resp = (HttpResponse) RestAssured.get("http://www.google.com");
+       
+        if()
+        {
+        	
+        }
+        
+    }
+}

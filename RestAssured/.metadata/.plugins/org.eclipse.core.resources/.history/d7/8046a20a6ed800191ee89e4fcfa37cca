@@ -1,0 +1,14 @@
+
+public class StringOperations {
+
+	String data = "jitendra.kumar2@gmail.com";
+	
+	StringBuffer sb =  new StringBuffer();
+
+	String [] splitarray = data.toCharArray();
+	
+	public static void main(String [] args)
+{
+	
+}
+}

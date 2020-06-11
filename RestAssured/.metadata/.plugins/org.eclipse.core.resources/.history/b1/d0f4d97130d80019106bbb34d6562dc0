@@ -1,0 +1,30 @@
+package login.io.login;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class google {
+
+	private static final int HTTP_STATUS_CODE = 200;
+
+	@Test
+	public void testgoogle() {
+
+		Response resp = RestAssured.get("http://www.google.com");
+		Assert.assertEquals(HTTP_STATUS_CODE, resp.getStatusCode());
+
+		System.err.println(resp.getSessionId());
+		System.err.println(resp.getStatusLine());
+		System.err.println(resp.getTime());
+		System.err.println(resp.getSessionId());
+		System.err.println(resp.getHeaders());
+		
+		
+		System.out.println(resp.asString());
+
+	}
+
+}

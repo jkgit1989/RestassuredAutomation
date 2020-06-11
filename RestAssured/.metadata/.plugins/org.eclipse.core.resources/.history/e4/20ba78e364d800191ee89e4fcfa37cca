@@ -1,0 +1,21 @@
+package login.io.login;
+
+import org.testng.Assert;
+import org.hamcrest.*;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured.*;
+import io.restassured.response.Response;
+
+public class google {
+
+	private static final int HTTP_STATUS_CODE = 200;
+
+	@Test
+	public void testgoogle() {
+		get("/events?id=390").then().statusCode(200).assertThat()
+	      .body("data.leagueId", equalTo(35));
+
+	}
+
+}

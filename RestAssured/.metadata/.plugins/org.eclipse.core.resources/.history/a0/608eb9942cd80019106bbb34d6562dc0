@@ -1,0 +1,23 @@
+package login.io.login;
+
+import org.apache.http.HttpResponse;
+
+import io.restassured.RestAssured;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class AppTest 
+    extends TestCase
+{
+
+	@Test
+    public AppTest()
+    {
+    	HttpResponse resp = (HttpResponse) RestAssured.get("http://www.google.com");
+
+		System.out.println(resp.getStatusLine());
+    }
+
+
+}

@@ -1,0 +1,7 @@
+
+public class HashCodeGenerator {
+	public static void main(String[] args) {
+		String name = "GFG";
+		System.out.println("name: " + name + " & hashcode is : " + name.hashCode());
+	}
+}

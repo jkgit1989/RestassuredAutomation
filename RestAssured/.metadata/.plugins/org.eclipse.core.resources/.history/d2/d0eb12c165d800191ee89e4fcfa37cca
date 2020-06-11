@@ -1,0 +1,22 @@
+package login.io.login;
+
+import org.testng.Assert;
+import org.hamcrest.*;
+import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.*;
+import io.restassured.response.Response;
+
+public class google {
+
+	private static final int HTTP_STATUS_CODE = 200;
+
+	@Test
+	public void whenRequestedPost_thenCreated() {
+	    with().body(new Odd(5.25f, 1, 13.1f, "X"))
+	      .when()
+	      .request("POST", "/odds/new")
+	      .then()
+	      .statusCode(201);
+	}
+}

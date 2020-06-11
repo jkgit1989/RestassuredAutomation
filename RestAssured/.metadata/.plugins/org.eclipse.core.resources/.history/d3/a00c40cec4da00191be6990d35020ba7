@@ -1,0 +1,52 @@
+import java.util.*;
+
+public class RemoveDuplicateContacts {
+
+	private String name;
+	private Long number;
+	private Map<String, Long> contacts = new LinkedHashMap();
+	private Set<String> uniqueNames = new LinkedHashSet();
+
+	public Long getNumber() {
+		return number;
+	}
+
+	public void setNumber(Long number) {
+		this.number = number;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+	
+	public void addContacts(String name, Long number)
+	{
+		contacts.put(name, number);
+	}
+
+	public static void main(String[] args) {
+
+		RemoveDuplicateContacts rdcs = new RemoveDuplicateContacts();
+
+		String name = null;
+		Long number = 0L;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter contact details:");
+		while (true) {
+			if (sc.nextInt() == 0) {
+				break;
+			}
+
+			name = sc.next("Name: ");
+			number = sc.nextLong();
+			rdcs.addContacts(name, number);
+
+		}
+
+	}
+}

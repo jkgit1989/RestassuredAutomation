@@ -1,0 +1,7 @@
+
+public class HashCodeGenerator {
+	public static void main(String[] args) {
+		String name = "JITE";
+		System.out.println("name: " + name + " & hashcode is : " + name.hashCode());
+	}
+}
